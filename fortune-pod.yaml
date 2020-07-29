@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fortune-pod
+  namespace: fortune-ns
+  labels:
+    app: fortune
+spec:
+  containers:
+  - name: fortune-container
+    image: myho8888/my-fortune:v2
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 3000
